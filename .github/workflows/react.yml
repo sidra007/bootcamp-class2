@@ -22,7 +22,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: setup node.js environment
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@1.4.2
         with:
           version: node-version: 12
           
@@ -35,10 +35,10 @@ jobs:
         run: yarn build
         
       -name: installing surge
-       run: npm install -g surge
+        run: npm install -g surge
        
       -name: deploying on surge
-       run: surge ./build http://bboot.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
+        run: surge ./build http://bboot.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
         
             
         
