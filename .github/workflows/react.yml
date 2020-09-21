@@ -24,12 +24,12 @@ jobs:
       - name: setup node.js environment
         uses: actions/setup-node@v2-beta
         with:
-          version: node-version: 12
+        version: node-version: 12
           
       - name: github action for yarn
         uses: Borales/actions-yarn@v2.1.0
         with: 
-          cmd: install  
+        cmd: install  
           
       -name:  creating build
         run: yarn build
